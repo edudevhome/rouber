@@ -16,7 +16,7 @@ import android.widget.TextView;
 //import com.google.android.gms.ads.AdView;
 //import com.google.android.gms.ads.AdSize;
 //import com.google.android.gms.ads.MobileAds;
-//import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AlertDialog;
 //import android.content.Intent;
 
 
@@ -37,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
     private double porcUber;
     private double resultado = (motorista / total) * 100;
     private double valorUber;
+
 
     //private AdView adView;
     // private Button buttonIntersticial;
@@ -71,7 +72,7 @@ public class MainActivity extends AppCompatActivity {
         // VERIFICA SE OS CAMPOS ESTAO VAZIOS
 
 
-   //Ocultar teclado
+        //Ocultar teclado
 
         editTextTotal.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -95,43 +96,87 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
-
     public void calcula(View view) {
+// recuperar valores digitados
 
 
+        //double total = Double.parseDouble(editTextTotal.getText().toString());
+        //double motorista = Double.parseDouble(editTextMotorista.getText().toString());
 
-        // recuperar valores digitados
-        double total = Double.parseDouble(editTextTotal.getText().toString());
-        double motorista = Double.parseDouble(editTextMotorista.getText().toString());
+        String valorTotal = editTextTotal.getText().toString();
+        String valorMotorista = editTextMotorista.getText().toString();
 
 
-        double valorUber = total - motorista;
-        double resultado = (motorista / total) * 100;
+        //VALIDAR OS CAMPOS DIGITADOS
+
+        Boolean camposValidados = this.validarCampos(valorTotal, valorMotorista);
+
+        if (camposValidados) {
+
+            this.Convert(valorTotal, valorMotorista);
+        } else {
+
+            AlertDialog.Builder dlg = new AlertDialog.Builder(this);
+            dlg.setTitle("Aviso!");
+            dlg.setMessage("Há campos vazios.");
+            dlg.setNeutralButton("OK", null);
+            dlg.show();
+        }
+
+        escondeTeclado(view);
+
+
+    }
+
+    public void Convert (String vTotal, String vMotorista) {
+
+        //CONVERTER VALORES STRING PARA NUMEROS
+
+        Double valorTotal = Double.parseDouble(vTotal);
+        Double valorMotorista = Double.parseDouble(vMotorista);
+
+        double valorUber = valorTotal - valorMotorista;
+        double resultado = (valorMotorista / valorTotal) * 100;
 
         porcUber = 100 - resultado;
 
         DecimalFormat df = new DecimalFormat("0.##");
 
 
-        escondeTeclado(view);
+        
 
 
         // exibe a porcentagem da uber na viagem
         textViewResult.setText("A uber estuprou do motorista R$" + df.format(valorUber) + ", ou seja, " + df.format(porcUber) + "% do total que o usuário pagou.");
 
+    }
+    
+
+        //VALIDAR OS CAMPOS DIGITADOS!!!
+
+    public Boolean validarCampos(String vTotal, String vMotorista) {
 
 
-            /*AlertDialog.Builder dlg = new AlertDialog.Builder(this);
-            dlg.setTitle("Aviso!");
-            dlg.setMessage("Há campos vazios.");
-            dlg.setNeutralButton("OK", null);
-            dlg.show();*/
+        Boolean camposValidados = true;
 
+        //Validar Campos
+
+        if (vTotal == null || vTotal.equals("")) {
+
+            camposValidados = false;
+
+        } else if (vMotorista == null || vMotorista.equals("")) {
+
+            camposValidados = false;
+
+        }
+        return camposValidados;
 
 
     }
+
+
+
 
 
 
