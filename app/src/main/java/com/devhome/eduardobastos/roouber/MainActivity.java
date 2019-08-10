@@ -57,7 +57,7 @@ public class MainActivity extends AppCompatActivity {
         buttonLimpar = findViewById(R.id.buttonLimpar);
 
 
-        // adView = findViewById(R.id.adView);
+        //adView = findViewById(R.id.adView);
 
 
         //AdView adView = new AdView(this);
