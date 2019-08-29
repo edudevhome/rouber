@@ -5,13 +5,6 @@
     package="com.devhome.eduardobastos.roouber">
 
 
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-    <uses-permission android:name="android.permission.INTERNET" />
-
-
-
     <application
 
         android:allowBackup="true"
@@ -28,11 +21,14 @@
 
         <activity
 
+                android:theme="@style/arroz"
             android:name=".MainActivity"
 
-            android:screenOrientation="portrait"/>
+            android:screenOrientation="portrait" />
 
         <activity
+
+
 
             android:name=".SplashScreenActivity"
 
@@ -43,7 +39,6 @@
                 <action android:name="android.intent.action.MAIN" />
 
 
-
                 <category android:name="android.intent.category.LAUNCHER" />
 
             </intent-filter>
@@ -51,15 +46,7 @@
         </activity>
 
 
-
-        <meta-data
-
-            android:name="com.google.android.gms.ads.ca-app-pub-3253976680799709~8917392375"
-
-            android:value="pub-3253976680799709" />
-
     </application>
-
 
 
 </manifest>
