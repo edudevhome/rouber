@@ -2,6 +2,8 @@ package com.devhome.eduardobastos.roouber;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
 import android.widget.EditText;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -10,6 +12,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 //import android.widget.Toast;
 //import com.google.android.gms.ads.AdRequest;
@@ -20,6 +23,8 @@ import androidx.appcompat.app.AlertDialog;
 //import android.content.Intent;
 
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.text.DecimalFormat;
 
 public class MainActivity extends AppCompatActivity {
@@ -29,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView textViewResult;
     private Button buttonCalc;
     private Button buttonLimpar;
+    private FloatingActionButton floatingActionButtonGliq;
 
     private LinearLayout linearLayout;
 
@@ -55,6 +61,17 @@ public class MainActivity extends AppCompatActivity {
         textViewResult = findViewById(R.id.textViewResult);
         buttonCalc = findViewById(R.id.buttonCalc);
         buttonLimpar = findViewById(R.id.buttonLimpar);
+        floatingActionButtonGliq = findViewById(R.id.floatingActionButtonGliq);
+
+
+        floatingActionButtonGliq.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),GanhosLiquidosActivity.class);
+
+                startActivity(intent);
+            }
+        });
 
 
         //adView = findViewById(R.id.adView);
@@ -198,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
         linearLayout.requestFocus(View.KEEP_SCREEN_ON);
        // editTextMotorista.setOnClickListener((View.OnClickListener)this);
 
-
+        Toast.makeText(getApplicationContext(), "Campos apagados com sucesso!", Toast.LENGTH_SHORT).show();
 
 
     }

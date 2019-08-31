@@ -1,12 +1,17 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent= "Theme.AppCompat.Light.DarkActionBar"></style>
-    <style name="arroz" parent="Theme.AppCompat.Light.NoActionBar">
+
+    <style name="colorPink" parent="Theme.AppCompat.Light"/>
+
+    <style name="arroz2" parent="Theme.AppCompat.Light">
+
+
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">#D500F9</item>
         <item name="colorAccent">@color/colorAccent</item>
+
     </style>
 
 

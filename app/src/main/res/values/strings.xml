@@ -1,20 +1,7 @@
 <resources>
-    <string name="app_name">roUber</string>
-    <string name="app_id">ca-app-pub-3253976680799709~8917392375</string>
-    <string name="banner_id">ca-app-pub-3253976680799709/1609747993</string>
-    <string name="intersticial_id">ca-app-pub-3253976680799709/2724309108</string>
-    <string name="title_activity_main2">Main2Activity</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
-    <string name="title_activity_tab_layout">TabLayoutActivity</string>
 
-
-    <string-array name="titles_tab">
-
-        <item>Ganhos Uber</item>
-        <item>Ganhos Líquidos</item>
-
-    </string-array>
+    <string name="gLiq">Ganhos Líquidos</string>
+    <string name="gBruto">Ganhos Brutos</string>
 
 
 </resources>
