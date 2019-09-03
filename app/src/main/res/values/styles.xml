@@ -2,14 +2,22 @@
 
     <!-- Base application theme. -->
 
-    <style name="colorPink" parent="Theme.AppCompat.Light"/>
+    <style name="arro1" parent="Theme.AppCompat.Light">
+
+
+        <item name="colorPrimary">#D500F9</item>
+        <item name="colorPrimaryDark">#D500F9</item>
+        <item name="colorAccent">#D81B60</item>
+
+    </style>
+
+
 
     <style name="arroz2" parent="Theme.AppCompat.Light">
 
-
         <!-- Customize your theme here. -->
+        <item name="colorPrimaryDark">@color/colorPrimary</item>
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">#D500F9</item>
         <item name="colorAccent">@color/colorAccent</item>
 
     </style>

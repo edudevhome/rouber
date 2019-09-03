@@ -152,8 +152,9 @@ public class MainActivity extends AppCompatActivity {
         Double valorTotal = Double.parseDouble(vTotal);
         Double valorMotorista = Double.parseDouble(vMotorista);
 
-        double valorUber = valorTotal - valorMotorista;
+        double valorUber = (valorTotal - valorMotorista);
         double resultado = (valorMotorista / valorTotal) * 100;
+        double gBruto = (valorMotorista + valorUber);
 
         porcUber = 100 - resultado;
 
@@ -164,8 +165,10 @@ public class MainActivity extends AppCompatActivity {
 
 
         // exibe a porcentagem da uber na viagem
-        textViewResult.setText("A uber estuprou do motorista R$" + df.format(valorUber) + ", ou seja, " + df.format(porcUber) + "% do total que o usuário pagou.");
-
+        textViewResult.setText(
+             ">> Porcentagem do aplicativo: " + df.format(porcUber) + "%"+"\n"+
+             ">> Lucro do aplicativo: R$" + df.format(valorUber)+".\n"+
+             ">> Ganhos brutos: R$"+gBruto);
     }
     
 

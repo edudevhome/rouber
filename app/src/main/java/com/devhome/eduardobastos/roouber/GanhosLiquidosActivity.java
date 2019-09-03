@@ -145,8 +145,10 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
 
 
             // exibe a porcentagem da uber na viagem
-            textViewResult.setText("O total de litros/m³ gasto na viagem foi " + df.format(result)+"L/M³. O valor total gasto " +
-                    "em combustível foi de R$"+df.format(totalLgasto$$$)+   "  . Valor líquido total da viagem foi de R$"+df.format(resultadoLiq)+".");
+            textViewResult.setText(
+               ">> Litros/m³ gasto na viagem: "+df.format(result)+"L/M³." + "\n"+
+               ">> Valor gasto em combustível: R$"+df.format(totalLgasto$$$)+".\n"+
+               ">> Ganhos líquidos: R$"+df.format(resultadoLiq)+".");
         }
 
 

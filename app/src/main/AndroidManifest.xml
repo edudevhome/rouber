@@ -8,8 +8,13 @@
         android:label="@string/gBruto"
         android:roundIcon="@mipmap/ic_launcher_rouber_round"
         android:supportsRtl="true"
-        android:theme = "@style/colorPink"
-        >
+        android:theme = "@style/arro1" >
+
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+                android:theme="@style/arro1"
+            />
 
 
 
@@ -17,15 +22,6 @@
             android:screenOrientation="portrait"
             android:theme="@style/arroz2"
             android:label="@string/gLiq"/>
-
-
-
-        <activity
-            android:name=".MainActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/colorPink"
-            android:label="@string/gBruto"/>
-
 
 
         <activity
