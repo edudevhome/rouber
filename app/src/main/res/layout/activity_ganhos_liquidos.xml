@@ -19,7 +19,7 @@
         android:layout_height="59dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
@@ -37,6 +37,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="numberDecimal"
+            android:maxLength="6"
             android:textColor="@android:color/background_light"
             android:textColorLink="#D81B60"
             android:textSize="20sp"
@@ -49,7 +50,7 @@
         android:layout_height="59dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
@@ -65,6 +66,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="numberDecimal"
+            android:maxLength="6"
             android:textColor="@android:color/background_light"
             android:textColorLink="#D81B60"
             android:textSize="20sp"
@@ -80,7 +82,7 @@
         android:layout_height="59dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
@@ -96,6 +98,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="numberDecimal"
+            android:maxLength="4"
             android:textColor="@android:color/background_light"
             android:textColorLink="#D81B60"
             android:textSize="20sp"
@@ -111,7 +114,7 @@
         android:layout_height="59dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
@@ -127,6 +130,7 @@
             android:layout_weight="1"
             android:ems="10"
             android:inputType="numberDecimal"
+            android:maxLength="4"
             android:textColor="@android:color/background_light"
             android:textColorLink="#D81B60"
             android:textSize="20sp"
@@ -140,7 +144,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="24dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="24dp"
         android:background="@android:color/holo_blue_dark"
         android:onClick="calculaa"
@@ -151,7 +155,7 @@
         android:layout_width="238dp"
         android:layout_height="wrap_content"
         android:layout_marginLeft="80dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="24dp"
         android:background="@android:color/holo_purple"
         android:onClick="limpaa"
@@ -166,6 +170,31 @@
         android:textColor="@color/colorAccent"
         android:textSize="24sp"
         android:textStyle="bold|italic" />
+
+
+
+    <RelativeLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        tools:context=".MainActivity">
+
+
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+
+        </com.google.android.gms.ads.AdView>
+
+    </RelativeLayout>
 
 
 </LinearLayout>

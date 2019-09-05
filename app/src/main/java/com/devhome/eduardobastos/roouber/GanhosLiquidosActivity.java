@@ -13,6 +13,10 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.text.DecimalFormat;
@@ -26,18 +30,14 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
     private TextView textViewResult;
     private Button buttonCalc;
     private Button buttonLimpar;
+    private AdView mAdView;
 
 
     private LinearLayout linearLayout;
 
     private double autonomia;
     private double result;
-    //private double preco;
-    //private double kmTotal;
-    //private double combustivelTotalGasto;
 
-    //private double gastoTotalCombustivel = (combustivelTotalGasto * preco);
-    //private double ganhosLiquidos = (motorista - gastoTotalCombustivel);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,6 +53,13 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
         buttonLimpar = findViewById(R.id.buttonLimpar);
         linearLayout = findViewById(R.id.linearLayout);
 
+        MobileAds.initialize(this, "ca-app-pub-3940256099942544/6300978111");
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+
 
         editKmTextTotal.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -62,7 +69,6 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
                 }
             }
         });
-
 
         editTextAutonomia.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
@@ -77,12 +83,10 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
     public void calculaa(View view) {
 // recuperar valores digitados
 
-
         String valorKmTotal = editKmTextTotal.getText().toString();
         String autonomiaLitro = editTextAutonomia.getText().toString();
         String valorPreco = editTextPreco.getText().toString();
         String valorMotorista = editTextMotorista.getText().toString();
-
 
         //VALIDAR OS CAMPOS DIGITADOS
 
@@ -104,7 +108,6 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
 
         escondeTeclado(view);
 
-
     }
 
     public void Convert(String vKmTotal, String vAutonomiaLitro) {
@@ -120,11 +123,6 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
 
         result = totalLgasto;
 
-        DecimalFormat df = new DecimalFormat("0.##");
-
-
-        // exibe a porcentagem da uber na viagem
-        textViewResult.setText("O total de litros gasto na viagem foi " + df.format(totalLgasto));
 
     }
 
@@ -139,23 +137,15 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
             double totalLgasto$$$ = (valorPrecoTotal * result);
             double resultadoLiq = (valorMotoristaTotal - totalLgasto$$$);
 
-            //totalLgasto = 100 - resultado;
-
             DecimalFormat df = new DecimalFormat("0.##");
 
 
             // exibe a porcentagem da uber na viagem
             textViewResult.setText(
-               ">> Litros/m³ gasto na viagem: "+df.format(result)+"L/M³." + "\n"+
+               ">> Combustível gasto: "+df.format(result)+"L/M³." + "\n"+
                ">> Valor gasto em combustível: R$"+df.format(totalLgasto$$$)+".\n"+
                ">> Ganhos líquidos: R$"+df.format(resultadoLiq)+".");
         }
-
-
-
-
-
-
 
     //VALIDAR OS CAMPOS DIGITADOS!!!
 
@@ -176,7 +166,6 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
 
         }
         return camposValidados;
-
 
     }
 
@@ -199,12 +188,7 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
 
         }
         return camposValidados2;
-
-
     }
-
-
-
 
     public void escondeTeclado(View v) {
 
@@ -227,7 +211,6 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
 
         linearLayout.requestFocus(View.KEEP_SCREEN_ON);
 
-
     }
 
     private boolean isCampoVazio(String valor) {
@@ -237,13 +220,3 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
     }
 
 }
-
-
-
-
-
-
-
-
-
-
