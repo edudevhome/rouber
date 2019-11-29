@@ -1,6 +1,9 @@
 <resources>
 
+
     <string name="gLiq">Ganhos Líquidos</string>
+
+
     <string name="gBruto">Ganhos Brutos</string>
 
 

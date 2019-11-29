@@ -4,6 +4,7 @@ package com.devhome.eduardobastos.roouber;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.util.Log;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -23,6 +24,10 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.initialization.InitializationStatus;
 import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
+//Classes do Intro
+import com.heinrichreimersoftware.materialintro.app.IntroActivity;
+import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,6 +53,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+
+
+
         //Configurando Interstitial
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
@@ -56,11 +64,11 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdUnitId("ca-app-pub-3253976680799709/5998595620");
         mInterstitialAd.loadAd(new AdRequest.Builder().build());
 
-        //Configurando Banner
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544/6300978111");
+        //Configurando Banner Nativo1
+        MobileAds.initialize(this, "ca-app-pub-3253976680799709/3175662176");
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
@@ -165,8 +173,8 @@ public class MainActivity extends AppCompatActivity {
         // EXIBINDO as informaçoes na tela
         textViewResult.setText(
              ">> Porcentagem do aplicativo: " + df.format(porcUber) + "%"+"\n"+
-             ">> Lucro do aplicativo: R$" + df.format(valorUber)+".\n"+
-             ">> Ganhos brutos: R$"+gBruto);
+             ">> Lucro do aplicativo: R$" + df.format(valorUber)+".\n");
+             //">> Ganhos brutos: R$"+gBruto)
     }
     
 
@@ -211,7 +219,7 @@ public class MainActivity extends AppCompatActivity {
        // editTextMotorista.setOnClickListener((View.OnClickListener)this);
 
         Toast.makeText(getApplicationContext(), "Campos apagados com sucesso!",
-                Toast.LENGTH_SHORT).show();
+                Toast.LENGTH_LONG).show();
 
     }
 

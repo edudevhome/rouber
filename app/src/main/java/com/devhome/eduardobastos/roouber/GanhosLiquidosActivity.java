@@ -53,7 +53,9 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
         buttonLimpar = findViewById(R.id.buttonLimpar);
         linearLayout = findViewById(R.id.linearLayout);
 
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544/6300978111");
+
+        //Configurando Banner Nativo2
+        MobileAds.initialize(this, "ca-app-pub-3253976680799709/2474283583");
 
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
