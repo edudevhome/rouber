@@ -13,10 +13,16 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.ads.nativetemplates.NativeTemplateStyle;
+import com.google.android.ads.nativetemplates.TemplateView;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.formats.NativeAdOptions;
+import com.google.android.gms.ads.formats.UnifiedNativeAd;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.text.DecimalFormat;
@@ -54,14 +60,10 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
         linearLayout = findViewById(R.id.linearLayout);
 
 
-        //Configurando Banner Nativo2
-        MobileAds.initialize(this, "ca-app-pub-3253976680799709/2474283583");
-
+        //Configurando Banner2
         mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-
-
 
         editKmTextTotal.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override

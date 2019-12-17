@@ -116,7 +116,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="12dp"
         android:textColor="@android:color/holo_blue_dark"
         android:textSize="24sp"
@@ -125,6 +125,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
@@ -138,10 +139,15 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            ads:adSize="BANNER"
-            ads:adUnitId="ca-app-pub-3253976680799709/3175662176">
+            android:layout_marginBottom="16dp"
+            ads:adSize = "SMART_BANNER"
+            ads:adUnitId="@string/IdBannerMain">
+
 
         </com.google.android.gms.ads.AdView>
+
+
+
 
     </RelativeLayout>
 

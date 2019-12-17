@@ -5,6 +5,23 @@
 
 
     <string name="gBruto">Ganhos Brutos</string>
+    <string name="title_activity_banner">Banner</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="hello_world">Hello world!</string>
+    <!-- -
+        This is an ad unit ID for a banner test ad. Replace with your own banner ad unit id.
+        For more information, see https://support.google.com/admob/answer/3052638
+    <!- -->
+    <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+
+<!-- AdMob Sample Id  ca-app-pub-3940256099942544~3347511713 * Oficial ca-app-pub-3253976680799709~5304750032
+     SampleBanner  ca-app-pub-3940256099942544/6300978111  * OficialMain ca-app-pub-3253976680799709/6906919391  * OficialGanhos ca-app-pub-3253976680799709/4948978072
+     SampleIntersticial ca-app-pub-3940256099942544/1033173712  * OficialIntersticial ca-app-pub-3253976680799709/2294894573-->
+    <string name="IdApp">ca-app-pub-3253976680799709~5304750032</string>
+    <string name="IdBannerMain">ca-app-pub-3253976680799709/6906919391</string>
+    <string name="IdBannerGanhos">ca-app-pub-3253976680799709/4948978072</string>
+    <string name="IdIntersticial_1">ca-app-pub-3253976680799709/2294894573</string>
 
 
 </resources>

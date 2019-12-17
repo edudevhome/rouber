@@ -2,6 +2,8 @@ package com.devhome.eduardobastos.roouber;
 
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.content.Intent;
 import android.util.Log;
 import android.view.WindowManager;
@@ -14,8 +16,15 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import androidx.appcompat.app.AlertDialog;
+
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdLoader;
+import com.google.android.gms.ads.formats.NativeAdOptions;
+import com.google.android.gms.ads.formats.UnifiedNativeAd;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+
 import java.text.DecimalFormat;
 //Classes ADS AdMob
 import com.google.android.gms.ads.AdView;
@@ -28,6 +37,11 @@ import com.google.android.gms.ads.initialization.OnInitializationCompleteListene
 //Classes do Intro
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
+
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -44,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     private double resultado = (motorista / total) * 100;
     private double valorUber;
     //Banner/Interstitial
-    private AdView mAdView;
+    private AdView adView;
     private InterstitialAd mInterstitialAd;
 
 
@@ -53,25 +67,22 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        MobileAds.initialize(this, "@string/IdBannerMain");
 
+        //Configurando Interstitial_1
 
-
-        //Configurando Interstitial
-        MobileAds.initialize(this, new OnInitializationCompleteListener() {
-            @Override
-            public void onInitializationComplete(InitializationStatus initializationStatus) {
-
-            }
-        });
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-3253976680799709/5998595620");
-        mInterstitialAd.loadAd(new AdRequest.Builder().build());
+        mInterstitialAd.setAdUnitId("ca-app-pub-3253976680799709/2294894573");
+        AdRequest adRequestInter = new AdRequest.Builder().build();
+        mInterstitialAd.loadAd(adRequestInter);
 
-        //Configurando Banner Nativo1
-        MobileAds.initialize(this, "ca-app-pub-3253976680799709/3175662176");
-        mAdView = findViewById(R.id.adView);
+
+        //Configurando Banner1
+
+        adView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        adView.loadAd(adRequest);
+
 
         //Configurando objetos de interação na tela
         linearLayout = findViewById(R.id.linearLayout);
@@ -83,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
         floatingActionButtonGliq = findViewById(R.id.floatingActionButtonGliq);
 
 
-    //Implementando Ad Interstitial ao evento de click do FAB
+        //Implementando Ad Interstitial ao evento de click do FAB
 
         floatingActionButtonGliq.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -95,7 +106,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.d("TAG", "The interstitial wasn't loaded yet.");
                 }
 
-                Intent intent = new Intent(getApplicationContext(),GanhosLiquidosActivity.class);
+                Intent intent = new Intent(getApplicationContext(), GanhosLiquidosActivity.class);
 
                 startActivity(intent);
             }
@@ -154,7 +165,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void Convert (String vTotal, String vMotorista) {
+    public void Convert(String vTotal, String vMotorista) {
 
         //CONVERTENDO STRINGS EM VALORES DOUBLES
 
@@ -172,13 +183,13 @@ public class MainActivity extends AppCompatActivity {
 
         // EXIBINDO as informaçoes na tela
         textViewResult.setText(
-             ">> Porcentagem do aplicativo: " + df.format(porcUber) + "%"+"\n"+
-             ">> Lucro do aplicativo: R$" + df.format(valorUber)+".\n");
-             //">> Ganhos brutos: R$"+gBruto)
+                ">> Porcentagem do aplicativo: " + df.format(porcUber) + "%" + "\n" +
+                        ">> Lucro do aplicativo: R$" + df.format(valorUber) + ".\n");
+        //">> Ganhos brutos: R$"+gBruto)
     }
-    
 
-        //VALIDAR OS CAMPOS DIGITADOS(não permite campos vazios)!!!
+
+    //VALIDAR OS CAMPOS DIGITADOS(não permite campos vazios)!!!
 
     public Boolean validarCampos(String vTotal, String vMotorista) {
 
@@ -208,15 +219,16 @@ public class MainActivity extends AppCompatActivity {
             inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
         }
     }
+
     //Limpa todos os campos
-    public void limpa (View view ) {
+    public void limpa(View view) {
 
         textViewResult.setText("");
         editTextMotorista.setText("");
         editTextTotal.setText("");
 
         linearLayout.requestFocus(View.KEEP_SCREEN_ON);
-       // editTextMotorista.setOnClickListener((View.OnClickListener)this);
+        // editTextMotorista.setOnClickListener((View.OnClickListener)this);
 
         Toast.makeText(getApplicationContext(), "Campos apagados com sucesso!",
                 Toast.LENGTH_LONG).show();

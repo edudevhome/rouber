@@ -75,6 +75,7 @@ public class SplashScreenActivity extends IntroActivity {
 
     public void btEntrar(View view){
         startActivity(new Intent(getBaseContext(), MainActivity.class));
+        finish();
     }
 
     /*public void openMain() {
