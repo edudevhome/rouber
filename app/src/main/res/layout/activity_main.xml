@@ -105,8 +105,8 @@
         android:layout_marginTop="40dp"
         android:background="@android:color/holo_blue_dark"
         android:clickable="true"
-        android:foreground="@drawable/moedinhas"
-        ads:backgroundTint="@android:color/darker_gray"
+        android:foreground="@drawable/dois"
+        ads:backgroundTint="@color/white"
         ads:backgroundTintMode="multiply">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
@@ -122,34 +122,28 @@
         android:textSize="24sp"
         android:textStyle="bold|italic" />
 
-    <RelativeLayout
+    <!--<RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="120dp"
+        tools:context=".MainActivity">-->
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="20dp"
-        android:paddingLeft="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
-        android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingBottom="@dimen/activity_vertical_margin"
-        tools:context=".MainActivity">
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="@string/IdBannerMain">
 
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="16dp"
-            ads:adSize = "SMART_BANNER"
-            ads:adUnitId="@string/IdBannerMain">
+    </com.google.android.gms.ads.AdView>
 
 
-        </com.google.android.gms.ads.AdView>
-
-
-
-
-    </RelativeLayout>
+<!--    </RelativeLayout>-->
 
 
 </LinearLayout>
