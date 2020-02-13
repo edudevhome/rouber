@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "16211884770",
+    "firebase_url": "https://rouber-a1fb3.firebaseio.com",
+    "project_id": "rouber-a1fb3",
+    "storage_bucket": "rouber-a1fb3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:16211884770:android:4972220b0fda97b3f77cbb",
+        "android_client_info": {
+          "package_name": "com.devhome.eduardobastos.roouber"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "16211884770-avv02i84rr1qbvu48ukdlfviv2srj4s2.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devhome.eduardobastos.roouber",
+            "certificate_hash": "7a675611ebd7cd251d34b20f5eaa0d7778bcc938"
+          }
+        },
+        {
+          "client_id": "16211884770-6d9mdn9rt69jsdm2i3pu3ldv5sto1hf4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAEPx2Woq6c4w4BkNM0p0RJX7pacvYr5yA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "16211884770-6d9mdn9rt69jsdm2i3pu3ldv5sto1hf4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
