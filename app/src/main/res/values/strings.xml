@@ -17,11 +17,11 @@
 
 <!-- AdMob Sample Id  ca-app-pub-3940256099942544~3347511713 * Oficial ca-app-pub-3253976680799709~5304750032
      SampleBanner  ca-app-pub-3940256099942544/6300978111  * OficialMain ca-app-pub-8069899346555474/1929091708  * OficialGanhos ca-app-pub-8069899346555474/1670071405
-     SampleIntersticial ca-app-pub-3940256099942544/1033173712  * OficialIntersticial ca-app-pub-3253976680799709/2294894573-->
+     SampleIntersticial ca-app-pub-3940256099942544/1033173712  * OficialIntersticial ca-app-pub-8069899346555474/6325015173-->
     <string name="IdApp">ca-app-pub-8069899346555474~5085436761</string>
     <string name="IdBannerMain">ca-app-pub-8069899346555474/1929091708</string>
     <string name="IdBannerGanhos">ca-app-pub-8069899346555474/1670071405</string>
-    <string name="IdIntersticial_1">ca-app-pub-3253976680799709/2294894573</string>
+    <string name="IdIntersticial_1">ca-app-pub-8069899346555474/6325015173</string>
 
 
 </resources>
