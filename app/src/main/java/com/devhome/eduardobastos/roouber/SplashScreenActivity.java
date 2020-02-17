@@ -35,7 +35,7 @@ public class SplashScreenActivity extends IntroActivity {
         //Configurando Interstitial_1
 
         mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.setAdUnitId("ca-app-pub-8069899346555474/6325015173");
         AdRequest adRequestInter = new AdRequest.Builder().build();
         mInterstitialAd.loadAd(adRequestInter);
 
@@ -86,11 +86,7 @@ public class SplashScreenActivity extends IntroActivity {
 
     }
 
-    // if (mInterstitialAd.isLoaded()) {
-    //  mInterstitialAd.show();
-    // } else {
-             //       Log.d("TAG", "The interstitial wasn't loaded yet.");
-    //}
+
 
     public void btEntrar(View view) {
 
