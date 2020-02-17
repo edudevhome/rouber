@@ -20,6 +20,7 @@ import com.google.android.gms.ads.AdLoader;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdSize;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.android.gms.ads.MobileAds;
 import com.google.android.gms.ads.formats.NativeAdOptions;
 import com.google.android.gms.ads.formats.UnifiedNativeAd;
@@ -37,6 +38,8 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
     private Button buttonCalc;
     private Button buttonLimpar;
     private AdView mAdView;
+
+    private InterstitialAd mInterstitialAd;
 
 
     private LinearLayout linearLayout;
@@ -58,6 +61,12 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
         buttonCalc = findViewById(R.id.buttonCalc);
         buttonLimpar = findViewById(R.id.buttonLimpar);
         linearLayout = findViewById(R.id.linearLayout);
+
+
+
+
+
+
 
 
         //Configurando Banner2

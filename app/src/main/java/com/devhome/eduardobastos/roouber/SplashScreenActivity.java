@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 
 //Classes do Intro
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.InterstitialAd;
 import com.heinrichreimersoftware.materialintro.app.IntroActivity;
 import com.heinrichreimersoftware.materialintro.slide.FragmentSlide;
 
@@ -19,12 +22,22 @@ public class SplashScreenActivity extends IntroActivity {
 
     private Button buttonEntrar;
 
+    private InterstitialAd mInterstitialAd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_splash_screen);
 
         buttonEntrar = findViewById(R.id.buttonEntrar);
+
+
+        //Configurando Interstitial_1
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        AdRequest adRequestInter = new AdRequest.Builder().build();
+        mInterstitialAd.loadAd(adRequestInter);
 
 
 
@@ -73,11 +86,27 @@ public class SplashScreenActivity extends IntroActivity {
 
     }
 
-    public void btEntrar(View view){
-        startActivity(new Intent(getBaseContext(), MainActivity.class));
-        finish();
-    }
+    // if (mInterstitialAd.isLoaded()) {
+    //  mInterstitialAd.show();
+    // } else {
+             //       Log.d("TAG", "The interstitial wasn't loaded yet.");
+    //}
 
+    public void btEntrar(View view) {
+
+            startActivity(new Intent(getBaseContext(), MainActivity.class));
+            finish();
+
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+
+
+
+        } else {
+            Log.d("TAG", "The interstitial wasn't loaded yet.");
+
+        }
+    }
     /*public void openMain() {
 
         startActivity(new Intent(getBaseContext(), MainActivity.class));

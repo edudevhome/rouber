@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
     private double valorUber;
     //Banner/Interstitial
     private AdView adView;
-    private InterstitialAd mInterstitialAd;
+    //
 
 
     @Override
@@ -54,12 +54,12 @@ public class MainActivity extends AppCompatActivity {
 
         MobileAds.initialize(this, "@string/IdBannerMain");
 
-        //Configurando Interstitial_1
-
-        mInterstitialAd = new InterstitialAd(this);
-        mInterstitialAd.setAdUnitId("ca-app-pub-8069899346555474/6325015173");
-        AdRequest adRequestInter = new AdRequest.Builder().build();
-        mInterstitialAd.loadAd(adRequestInter);
+//        //Configurando Interstitial_1
+//
+//        mInterstitialAd = new InterstitialAd(this);
+//        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+//        AdRequest adRequestInter = new AdRequest.Builder().build();
+//        mInterstitialAd.loadAd(adRequestInter);
 
 
         //Configurando Banner1
@@ -79,17 +79,17 @@ public class MainActivity extends AppCompatActivity {
         floatingActionButtonGliq = findViewById(R.id.floatingActionButtonGliq);
 
 
-        //Implementando Ad Interstitial ao evento de click do FAB
+        //Implementando Ad Interstitial ao evento de click do Entrar
 
         floatingActionButtonGliq.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                if (mInterstitialAd.isLoaded()) {
-                    mInterstitialAd.show();
-                } else {
+               // if (mInterstitialAd.isLoaded()) {
+                  //  mInterstitialAd.show();
+               // } else {
                     Log.d("TAG", "The interstitial wasn't loaded yet.");
-                }
+                //}
 
                 Intent intent = new Intent(getApplicationContext(), GanhosLiquidosActivity.class);
 
