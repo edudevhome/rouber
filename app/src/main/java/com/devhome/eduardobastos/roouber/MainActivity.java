@@ -122,6 +122,15 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public void escondeTeclado(View v) {
+
+        if (v != null) {
+
+            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(this.INPUT_METHOD_SERVICE);
+            inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
+        }
+    }
+
     //Executa operações aritméticas
     public void calcula(View view) {
 
@@ -196,14 +205,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    public void escondeTeclado(View v) {
 
-        if (v != null) {
-
-            InputMethodManager inputMethodManager = (InputMethodManager) getSystemService(this.INPUT_METHOD_SERVICE);
-            inputMethodManager.hideSoftInputFromWindow(v.getWindowToken(), 0);
-        }
-    }
 
     //Limpa todos os campos
     public void limpa(View view) {

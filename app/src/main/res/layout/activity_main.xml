@@ -23,7 +23,7 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:hint="Digite o valor total da viagem:"
+        android:hint="Valor total da viagem:"
         android:textColorHint="@android:color/holo_blue_dark"
 
         app:layout_constraintEnd_toEndOf="parent"
@@ -32,7 +32,7 @@
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextTotal"
-            android:layout_width="280dp"
+            android:layout_width="236dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
@@ -54,14 +54,14 @@
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
-        android:hint="Digite os ganhos do motorista:"
+        android:hint="Ganhos do motorista:"
         android:textColorHint="@android:color/holo_blue_dark"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/editTextMotorista"
-            android:layout_width="260dp"
+            android:layout_width="227dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:ems="10"
@@ -90,9 +90,8 @@
         android:id="@+id/buttonLimpar"
         android:layout_width="238dp"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="80dp"
+        android:layout_gravity="center"
         android:layout_marginTop="16dp"
-        android:layout_marginRight="24dp"
         android:background="@android:color/holo_blue_dark"
         android:onClick="limpa"
         android:text="Limpar" />
@@ -101,7 +100,7 @@
         android:id="@+id/floatingActionButtonGliq"
         android:layout_width="67dp"
         android:layout_height="68dp"
-        android:layout_marginLeft="330dp"
+        android:layout_marginLeft="290dp"
         android:layout_marginTop="40dp"
         android:background="@android:color/holo_blue_dark"
         android:clickable="true"
