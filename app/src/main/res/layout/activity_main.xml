@@ -15,11 +15,11 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout"
-        android:layout_width="352dp"
+        android:layout_width="253dp"
         android:layout_height="59dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
@@ -46,7 +46,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout3"
-        android:layout_width="352dp"
+        android:layout_width="wrap_content"
         android:layout_height="59dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
@@ -101,7 +101,7 @@
         android:layout_width="67dp"
         android:layout_height="68dp"
         android:layout_marginLeft="290dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="18dp"
         android:background="@android:color/holo_blue_dark"
         android:clickable="true"
         android:foreground="@drawable/dois"
@@ -115,10 +115,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="12dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="12dp"
         android:textColor="@android:color/holo_blue_dark"
-        android:textSize="24sp"
+        android:textSize="18sp"
         android:textStyle="bold|italic" />
 
     <!--<RelativeLayout
@@ -134,7 +134,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="180dp"
         ads:adSize="SMART_BANNER"
         ads:adUnitId="@string/IdBannerMain">
 
@@ -142,7 +142,7 @@
     </com.google.android.gms.ads.AdView>
 
 
-<!--    </RelativeLayout>-->
+    <!--    </RelativeLayout>-->
 
 
 </LinearLayout>
