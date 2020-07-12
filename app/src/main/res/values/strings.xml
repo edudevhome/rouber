@@ -15,7 +15,7 @@
     <!- -->
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
 
-<!-- AdMob Sample Id  ca-app-pub-3940256099942544~3347511713 * Oficial ca-app-pub-3253976680799709~5304750032
+<!-- AdMob Sample IdApp  ca-app-pub-3940256099942544~3347511713 * Oficial ca-app-pub-8069899346555474~5085436761                                          ca-app-pub-3253976680799709~5304750032
      SampleBanner  ca-app-pub-3940256099942544/6300978111  * OficialMain ca-app-pub-8069899346555474/1929091708  * OficialGanhos ca-app-pub-8069899346555474/1670071405
      SampleIntersticial ca-app-pub-3940256099942544/1033173712  * OficialIntersticial ca-app-pub-8069899346555474/6325015173-->
     <string name="IdApp">ca-app-pub-8069899346555474~5085436761</string>

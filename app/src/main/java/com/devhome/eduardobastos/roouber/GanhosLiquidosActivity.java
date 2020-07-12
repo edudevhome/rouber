@@ -53,6 +53,8 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ganhos_liquidos);
 
+        MobileAds.initialize(this,"@string/IdBannerGanhos");
+
         editKmTextTotal = findViewById(R.id.editTextKmTotal);
         editTextMotorista = findViewById(R.id.editTextMotorista);
         editTextAutonomia = findViewById(R.id.editTextAutonomia);
@@ -61,10 +63,6 @@ public class GanhosLiquidosActivity extends AppCompatActivity {
         buttonCalc = findViewById(R.id.buttonCalc);
         buttonLimpar = findViewById(R.id.buttonLimpar);
         linearLayout = findViewById(R.id.linearLayout);
-
-
-
-
 
 
 
